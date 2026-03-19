@@ -5,12 +5,7 @@ import os
 
 
 def download_file(url, save_path=None):
-    """
-    Core download function
-    :param url: URL address of the remote file
-    :param save_path: Local save path (optional, extract filename from URL by default)
-    :return: Return True if download succeeds, False if fails
-    """
+ 
     if save_path is None:
 
         file_name = os.path.basename(urllib.parse.urlsplit(url).path)
