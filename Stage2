@@ -1,0 +1,38 @@
+
+import urllib.request
+import urllib.parse
+import argparse
+import os
+
+def download_file(url, save_path=None):
+    if save_path is None:
+        file_name = os.path.basename(urllib.parse.urlsplit(url).path)
+        save_path = file_name if file_name else "downloaded_file"
+
+    try:
+        print(f"Downloading: {url}")
+        print(f"Saving to: {os.path.abspath(save_path)}")
+        urllib.request.urlretrieve(url, save_path)
+        print(f"Download done! Saved to: {os.path.abspath(save_path)}")
+        return True
+    except Exception as e:
+        print(f"Download failed: {str(e)}")
+        return False
+
+def main():
+    parser = argparse.ArgumentParser(
+        prog="wget_stage2_simple",
+        description="Simple wget-like download tool (Stage 2)"
+    )
+
+    # Mandatory URL argument
+    parser.add_argument("url", help="URL of file to download (required)")
+    # Optional -o/--output for custom filename
+    parser.add_argument("-o", "--output", help="Custom save path/filename (optional)")
+
+    # Parse arguments and run download
+    args = parser.parse_args()
+    download_file(args.url, args.output)
+
+if __name__ == "__main__":
+    main()
