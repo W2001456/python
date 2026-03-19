@@ -7,7 +7,6 @@ import os
 def download_file(url, save_path=None):
  
     if save_path is None:
-
         file_name = os.path.basename(urllib.parse.urlsplit(url).path)
 
         if not file_name:
@@ -38,14 +37,9 @@ def download_file(url, save_path=None):
 
 
 if __name__ == "__main__":
-    # Check if URL parameter is provided
     if len(sys.argv) < 2:
         print("Usage: python3 wget_stage1.py <file URL>")
         print("Example: python3 wget_stage1.py https://example.com/test.png")
         sys.exit(1)
-
-    # Get the URL passed from command line
     target_url = sys.argv[1]
-
-    # Call the download function
     download_file(target_url)
