@@ -1,30 +1,31 @@
-# WGET 克隆版 (Python 实现)
-9 个阶段逐步实现 Linux Wget 下载工具
+# Python Wget 
 
-## 阶段 1：基础下载
-功能：最简单的文件下载
+
+## Stage 1: Basic Download
+Function: Simplest file download
 ![Stage1](screenshots/stage1.png)
 
-## 阶段 2：自定义文件名 -o / --output
+## Stage 2: Custom Output Filename `-o` / `--output`
 ![Stage2](screenshots/stage2.png)
 
-## 阶段 3：进度条
+## Stage 3: Progress Bar
 ![Stage3](screenshots/stage3.png)
 
-## 阶段 4：下载速度 + 预计剩余时间
+## Stage 4: Download Speed + ETA (Estimated Time of Arrival)
 ![Stage4](screenshots/stage4.png)
 
-## 阶段 5：重定向 + 错误码处理 (404/500/403)
+## Stage 5: Redirects + Error Code Handling (404/500/403)
 ![Stage5](screenshots/stage5.png)
 
-## 阶段 6：重试机制 --retry + 超时 timeout
+## Stage 6: Retry Mechanism `--retry` + Timeout
 ![Stage6](screenshots/stage6.png)
 
-## 阶段 7：HTTP 认证 + 自定义请求头 --user --password --header
+## Stage 7: HTTP Auth + Custom Headers `--user` `--password` `--header`
 ![Stage7](screenshots/stage7.png)
 
-## 阶段 8：打包为 EXE 二进制文件
+## Stage 8: Package to EXE Binary File
 ![Stage8](screenshots/stage8.png)
 
-## 阶段 9：异步下载 + 缓冲区优化 128KB
+## Stage 9: Async Download + 128KB Buffer Optimization
 ![Stage9](screenshots/stage9.png)
+
